@@ -33,7 +33,9 @@ client.on("messageCreate", async message => {
 
   return message.reply({
     embeds : [
-      new EmbedBuilder().setColor(`#2f3136`).setDescription(answer.data.choices[0].message.content)
+      new EmbedBuilder()
+      .setColor("2F3136")
+      .setDescription(answer.data.choices[0].message.content)
     ]
   })
 });
