@@ -1,5 +1,5 @@
 const config = {
-  token: "",
-  apiKey: "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",
+  token: "DISCORD BOT TOKEN",
+  apiKey: "OPEN AI API KEY",
 }
 module.exports = config;
