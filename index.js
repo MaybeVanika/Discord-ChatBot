@@ -1,6 +1,8 @@
 const { Client , EmbedBuilder } = require(`discord.js`);
 const { Configuration , OpenAIApi } = require(`openai`);
 const config = require(`./config`);
+const dotenv = require('dotenv');
+dotenv.config();
 
 const client = new Client({
   intents: 33347,
@@ -8,7 +10,7 @@ const client = new Client({
 });
 
 const configuration = new Configuration({
-  apiKey: config.apiKey
+  apiKey: process.env.apiKey
 })
 
 const api = new OpenAIApi(configuration)
@@ -40,4 +42,4 @@ client.on("messageCreate", async message => {
   })
 });
 
-client.login(config.token);
+client.login(process.env.token);
